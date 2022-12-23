@@ -8,8 +8,11 @@ import Carousel from '../components/Carousel'
 import { Contact } from '../components/Contact'
 import Service from '../components/Service'
 import bg from '../components/image/hero-banners.png'
+import { useEffect, useState } from 'react'
+import axios from "axios";
 
 export default function Home() {
+ 
   return (
     <div className={styles.container}>
       <Head>
