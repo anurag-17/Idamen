@@ -1,5 +1,5 @@
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
+import { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -13,72 +13,85 @@ import {
   ShieldCheckIcon,
   Squares2X2Icon,
   XMarkIcon,
-} from '@heroicons/react/24/outline'
-import logo from '../components/image/id-men-logo.svg'
-import Image from 'next/image';
-
+} from "@heroicons/react/24/outline";
+import logo from "../components/image/id-men-logo.svg";
+import Image from "next/image";
 
 const solutions = [
   {
-    name: 'About Us',
-    description: 'Get a better understanding of where your traffic is coming from.',
-    href: '#',
+    name: "About Us",
+    description:
+      "Get a better understanding of where your traffic is coming from.",
+    href: "#",
     icon: ChartBarIcon,
   },
   {
-    name: 'Service Offerings',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
+    name: "Service Offerings",
+    description: "Speak directly to your customers in a more meaningful way.",
+    href: "#",
     icon: CursorArrowRaysIcon,
   },
   {
-    name: 'FAQ',
+    name: "FAQ",
     description: "Connect with third-party tools that you're already using.",
-    href: '#faqs',
+    href: "#faqs",
     icon: Squares2X2Icon,
   },
   {
-    name: 'Contact Us    ',
-    description: 'Build strategic funnels that will drive your customers to convert',
-    href: '#contact',
+    name: "Contact Us    ",
+    description:
+      "Build strategic funnels that will drive your customers to convert",
+    href: "#contact",
     icon: ArrowPathIcon,
   },
-]
+];
 const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
-]
+  { name: "Watch Demo", href: "#", icon: PlayIcon },
+  { name: "Contact Sales", href: "#", icon: PhoneIcon },
+];
 const resources = [
   {
-    name: 'Help Center',
-    description: 'Get all of your questions answered in our forums or contact support.',
-    href: '#',
+    name: "Help Center",
+    description:
+      "Get all of your questions answered in our forums or contact support.",
+    href: "#",
     icon: LifebuoyIcon,
   },
   {
-    name: 'Guides',
-    description: 'Learn how to maximize our platform to get the most out of it.',
-    href: '#',
+    name: "Guides",
+    description:
+      "Learn how to maximize our platform to get the most out of it.",
+    href: "#",
     icon: BookmarkSquareIcon,
   },
   {
-    name: 'Events',
-    description: 'See what meet-ups and other events we might be planning near you.',
-    href: '#',
+    name: "Events",
+    description:
+      "See what meet-ups and other events we might be planning near you.",
+    href: "#",
     icon: CalendarIcon,
   },
-  { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: ShieldCheckIcon },
-]
+  {
+    name: "Security",
+    description: "Understand how we take your privacy seriously.",
+    href: "#",
+    icon: ShieldCheckIcon,
+  },
+];
 const recentPosts = [
-  { id: 1, name: 'Boost your conversion rate', href: '#' },
-  { id: 2, name: 'How to use search engine optimization to drive traffic to your site', href: '#' },
-  { id: 3, name: 'Improve your customer experience', href: '#' },
-]
+  { id: 1, name: "Boost your conversion rate", href: "#" },
+  {
+    id: 2,
+    name: "How to use search engine optimization to drive traffic to your site",
+    href: "#",
+  },
+  { id: 3, name: "Improve your customer experience", href: "#" },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
-console.log(logo)
+console.log(logo);
 export default function Example() {
   return (
     <Popover className="relative">
@@ -87,9 +100,15 @@ export default function Example() {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">Idamen</span>
-              <Image className="h-8 sitelogo w-auto sm:h-10" src={logo.src} alt="idamen" width={232} height={89}/>
+              <Image
+                className="h-8 sitelogo w-auto sm:h-10"
+                src={logo.src}
+                alt="idamen"
+                width={232}
+                height={89}
+              />
             </a>
-          </div>  
+          </div>
           <div className="-my-2 -mr-2 md:hidden ">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Open menu</span>
@@ -97,20 +116,28 @@ export default function Example() {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-          <a href="#abts-us" className="text-base font-medium	 font-sm text-black-500 hover:text-gray-900">
-            About Us
+            <a
+              href="#abts-us"
+              className="text-base font-medium	 font-sm text-black-500 hover:text-gray-900"
+            >
+              About Us
             </a>
 
-            <a href="#service-of" className="text-base font-medium font-sm text-black-500 hover:text-gray-900">
-            Cloud Solutions
+            <a
+              href="#service-of"
+              className="text-base font-medium font-sm text-black-500 hover:text-gray-900"
+            >
+              Cloud Solutions
             </a>
-            <a href="#faqs" className="text-base font-medium font-sm text-black-500 hover:text-gray-900">
-             FAQ
+            <a
+              href="#faqs"
+              className="text-base font-medium font-sm text-black-500 hover:text-gray-900"
+            >
+              FAQ
             </a>
-                 
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-3 lg:w-30">
-           <a
+            <a
               href="#"
               className="ml-8 hovs font-semibold	uppercase inline-flex items-center justify-center whitespace-nowrap rounded-full	bg-black  px-8 py-4 text-sm font-extrabold text-white shadow-sm hover:bg-black-500"
             >
@@ -129,7 +156,10 @@ export default function Example() {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <Popover.Panel focus className="mbwrapper absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden">
+        <Popover.Panel
+          focus
+          className="mbwrapper absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
+        >
           <div className="z-50	 divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
@@ -137,7 +167,9 @@ export default function Example() {
                   <Image
                     className="h-8 w-auto"
                     src={logo.src}
-                    alt="Your Company"  width={100} height={100}
+                    alt="Your Company"
+                    width={100}
+                    height={100}
                   />
                 </div>
                 <div className="-mr-2">
@@ -155,8 +187,13 @@ export default function Example() {
                       href={item.href}
                       className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
                     >
-                      <item.icon className="h-6 w-6 flex-shrink-0 text-indigo-600" aria-hidden="true" />
-                      <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
+                      <item.icon
+                        className="h-6 w-6 flex-shrink-0 text-indigo-600"
+                        aria-hidden="true"
+                      />
+                      <span className="ml-3 text-base font-medium text-gray-900">
+                        {item.name}
+                      </span>
                     </a>
                   ))}
                 </nav>
@@ -164,12 +201,18 @@ export default function Example() {
             </div>
             <div className="space-y-6 py-6 px-5">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                <a
+                  href="#"
+                  className="text-base font-medium text-gray-900 hover:text-gray-700"
+                >
                   About Us
                 </a>
 
-                <a href="#service-of" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                Service Offerings
+                <a
+                  href="#service-of"
+                  className="text-base font-medium text-gray-900 hover:text-gray-700"
+                >
+                  Service Offerings
                 </a>
                 {resources.map((item) => (
                   <a
@@ -188,12 +231,11 @@ export default function Example() {
                 >
                   Get Started Today
                 </a>
-            
               </div>
             </div>
           </div>
         </Popover.Panel>
       </Transition>
     </Popover>
-  )
+  );
 }
