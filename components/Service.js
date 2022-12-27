@@ -50,13 +50,14 @@ const Tabs = () => {
                   <li className="nav-item" role="presentation">
                     <a
                       href={`#${item.attributes.title}`}
-                      className="nav-link block font-medium text-2xl leading-tight border-x-0 border-t-0 border-b-2 border-transparent py-3  ml-2  focus:border-transparent active"
-                      id={`${item.attributes.title}`}
+                      className={index=== 0?(
+                      "nav-link block font-medium text-2xl leading-tight border-x-0 border-t-0 border-b-2 border-transparent py-3  ml-2  focus:border-transparent active"):("nav-link block font-semibold text-2xl	 leading-tight border-x-0 border-t-0 border-b-2 border-transparent py-3 my-2 focus:border-transparent")}
+                      id={`${item.attributes.title}-tab`}
                       data-bs-toggle="pill"
                       data-bs-target={`#${item.attributes.title}`}
                       role="tab"
                       aria-controls={`${item.attributes.title}`}
-                      aria-selected="true"
+                      aria-selected={index=== 0?("true"):("false")}
                     >
                       {item.attributes.title}
                     </a>
@@ -72,7 +73,7 @@ const Tabs = () => {
               return (
                 <>
                   <div
-                    className={index=== 0?("tab-pane fade show active"):("tab-pane fade  ")}
+                    className={index=== 0?("tab-pane fade show active"):("tab-pane fade")}
                     id=  {item.attributes.title}
                     role="tabpanel"
                     aria-labelledby={`${item.attributes.title}-tab`}

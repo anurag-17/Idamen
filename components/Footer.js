@@ -5,7 +5,7 @@ import axios from "axios";
 
 const Footer = () => {
   const [serviceoffering, setserviceoffering] = useState();
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("");-
 
   useEffect(() => {
     fetchserviceoffering();
