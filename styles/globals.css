@@ -74,8 +74,8 @@ a{
   padding-right: 25px;
 }
 .fqs-main .max-w-7xl .w-1\/2 {
-  margin-left: 50px;
-  margin-right: 50px;
+  display: flex;
+flex-wrap: wrap;
 }
 .bg-stons-900 {
   background: #000000;

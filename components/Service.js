@@ -55,7 +55,7 @@ const Tabs = () => {
                       data-bs-toggle="pill"
                       data-bs-target={`#${item.attributes.title}`}
                       role="tab"
-                      aria-controls={`#${item.attributes.title}`}
+                      aria-controls={`${item.attributes.title}`}
                       aria-selected="true"
                     >
                       {item.attributes.title}

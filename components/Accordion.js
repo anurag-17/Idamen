@@ -50,7 +50,7 @@ export default function Faq() {
         </div>
 
         <div className="flex faq-clms">
-          <div className="w-1/2">
+          <div className="">
           <Fragment>
             {faq &&
             faq.map((item, index) => {
