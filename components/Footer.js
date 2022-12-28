@@ -246,7 +246,7 @@ const Footer = () => {
 
                   <div className="social-icons-centers flex justify-left">
                     <a
-                      href={socialmedia.attributes.twitter} target="_blanck"
+                      href={socialmedia.attributes.twitter} target="_blank"
                       className="mr-2  sm:float-right  text-gray-600"
                     >
                       <svg
@@ -266,7 +266,7 @@ const Footer = () => {
                       </svg>
                     </a>
 
-                    <a href={socialmedia.attributes.insta} target="_blanck" className="mr-2 sm:float-right text-gray-600">
+                    <a href={socialmedia.attributes.insta} target="_blank" className="mr-2 sm:float-right text-gray-600">
                       <svg
                         aria-hidden="true"
                         focusable="false"
@@ -283,7 +283,7 @@ const Footer = () => {
                         ></path>
                       </svg>
                     </a>
-                    <a href={socialmedia.attributes.linkedin} target="_blanck" className="mr-2 sm:float-right text-gray-600">
+                    <a href={socialmedia.attributes.linkedin} target="_blank" className="mr-2 sm:float-right text-gray-600">
                       <svg
                         aria-hidden="true"
                         focusable="false"
