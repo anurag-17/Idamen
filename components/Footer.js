@@ -5,10 +5,13 @@ import axios from "axios";
 
 const Footer = () => {
   const [serviceoffering, setserviceoffering] = useState();
-  const [message, setMessage] = useState("");-
+  const [message, setMessage] = useState("");
+  const [socialmedia, setsocialmedia ] = useState();
+  
 
   useEffect(() => {
     fetchserviceoffering();
+    social()
   }, []);
   const [newsleeter, setNewsleeter] = useState({ email: "" });
 
@@ -23,6 +26,14 @@ const Footer = () => {
       })
       .then((res) => setserviceoffering(res.data.data));
   };
+  const social = async () => {
+    await axios
+      .get("http://34.122.203.107:1338/api/website-info", {
+        headers: headers,
+      })
+      .then((res) => setsocialmedia(res.data.data));
+  };
+  console.log(socialmedia);
   const submitemail = async (e) => {
     e.preventDefault();
     await axios.post(
@@ -235,7 +246,7 @@ const Footer = () => {
 
                   <div className="social-icons-centers flex justify-left">
                     <a
-                      href={serviceoffering[2]["attributes"].description}
+                      href={socialmedia.attributes.twitter} target="_blanck"
                       className="mr-2  sm:float-right  text-gray-600"
                     >
                       <svg
@@ -255,7 +266,7 @@ const Footer = () => {
                       </svg>
                     </a>
 
-                    <a href="#!" className="mr-2 sm:float-right text-gray-600">
+                    <a href={socialmedia.attributes.insta} target="_blanck" className="mr-2 sm:float-right text-gray-600">
                       <svg
                         aria-hidden="true"
                         focusable="false"
@@ -272,7 +283,7 @@ const Footer = () => {
                         ></path>
                       </svg>
                     </a>
-                    <a href="#!" className="mr-2 sm:float-right text-gray-600">
+                    <a href={socialmedia.attributes.linkedin} target="_blanck" className="mr-2 sm:float-right text-gray-600">
                       <svg
                         aria-hidden="true"
                         focusable="false"

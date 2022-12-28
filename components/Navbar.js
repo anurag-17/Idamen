@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
   ArrowPathIcon,
@@ -16,6 +16,7 @@ import {
 } from "@heroicons/react/24/outline";
 import logo from "../components/image/id-men-logo.svg";
 import Image from "next/image";
+import axios from "axios";
 
 const solutions = [
   {
@@ -90,9 +91,28 @@ const recentPosts = [
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
+
 }
-console.log(logo);
 export default function Example() {
+  const [serviceoffering, setserviceoffering] = useState();
+  
+  useEffect(() => {
+    fetchserviceoffering();
+  }, []);
+  const fetchserviceoffering = async () => {
+    let headers = {
+      Authorization:
+      "bearer 69cb9b78ec4fbae4454e2d7d937ed535eea92c9cd01d9f77836a25ad55bba65e63943b12028ae7cdfdc451ae19895c0fff3f4b273b84765f607a277d968cbb1709d07084aab0e142aac30edae7e4fe194903eac57c726bd4d845c1fadefa85868a37e2c087dc1657da45d85dd02d22a9a09387b4d6a3dfb17f37e8875d173d91",
+    };
+    await axios
+    .get("http://34.122.203.107:1338/api/website-info?populate=logo", {
+        headers: headers,
+      })
+      .then((res) => setserviceoffering(res.data.data.attributes.logo.data[0].attributes.url));
+  };
+  // /api/website-info
+  console.log(serviceoffering);
+
   return (
     <Popover className="relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -100,9 +120,9 @@ export default function Example() {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">Idamen</span>
-              <Image
+              <img
                 className="h-8 sitelogo w-auto sm:h-10"
-                src={logo.src}
+                src={`http://34.122.203.107:1338${serviceoffering}`}
                 alt="idamen"
                 width={232}
                 height={89}
