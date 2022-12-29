@@ -73,6 +73,10 @@ a{
   padding-left: 25px;
   padding-right: 25px;
 }
+.z-20{
+  color:#000000;
+  z-index: 999;
+}
 .fqs-main .max-w-7xl .w-1\/2 {
   display: flex;
 flex-wrap: wrap;

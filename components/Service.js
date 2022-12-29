@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
-import adiba from "../components/image/adiba-bank-cloud.png";
-
-import Image from "next/image";
 import axios from "axios";
-
-const Tabs = () => {
+import {
+  Tabs,
+  TabsHeader,
+  TabsBody,
+  Tab,
+  TabPanel,
+} from "@material-tailwind/react";
+const Tabss = () => {
   const [serviceoffering, setserviceoffering] = useState();
 
   useEffect(() => {
@@ -37,7 +40,7 @@ const Tabs = () => {
           globe
         </p>
 
-        <ul
+        {/* <ul
           className="nav nav-tabs flex mt-7 flex-col items-center md:flex-row flex-wrap list-none border-b-0 pl-0 mb-10"
           id="tabs-tab"
           role="tablist"
@@ -49,14 +52,14 @@ const Tabs = () => {
                 <>
                   <li className="nav-item" role="presentation">
                     <a
-                      href={`#${item.attributes.title}`}
+                      href={`#tabs-${item.attributes.title}`}
                       className={index=== 0?(
                       "nav-link block font-medium text-2xl leading-tight border-x-0 border-t-0 border-b-2 border-transparent py-3  ml-2  focus:border-transparent active"):("nav-link block font-semibold text-2xl	 leading-tight border-x-0 border-t-0 border-b-2 border-transparent py-3 my-2 focus:border-transparent")}
-                      id={`${item.attributes.title}-tab`}
+                      id={`tabs-${item.attributes.title}-tab`}
                       data-bs-toggle="pill"
-                      data-bs-target={`#${item.attributes.title}`}
+                      data-bs-target={`#tabs-${item.attributes.title}`}
                       role="tab"
-                      aria-controls={`${item.attributes.title}`}
+                      aria-controls={`tabs-${item.attributes.title}`}
                       aria-selected={index=== 0?("true"):("false")}
                     >
                       {item.attributes.title}
@@ -65,8 +68,8 @@ const Tabs = () => {
                 </>
               );
             })}
-        </ul>
-        <div className="tab-content" id="tabs-tabContent">
+        </ul> */}
+        {/* <div className="tab-content" id="tabs-tabContent">
           {serviceoffering &&
             serviceoffering.map((item, index) => {
               // console.log(item.attributes.image .data[0].attributes.url);
@@ -74,9 +77,9 @@ const Tabs = () => {
                 <>
                   <div
                     className={index=== 0?("tab-pane fade show active"):("tab-pane fade")}
-                    id=  {item.attributes.title}
+                    id= {`tabs-${item.attributes.title}`}
                     role="tabpanel"
-                    aria-labelledby={`${item.attributes.title}-tab`}
+                    aria-labelledby={`tabs-${item.attributes.title}-tab`}
                   >
                     <div
                       id="abts-us"
@@ -111,10 +114,58 @@ const Tabs = () => {
               );
             })}
         
-        </div>
+        </div> */}
+       {serviceoffering ?( <Tabs value={1}>
+          <TabsHeader>
+            {serviceoffering &&
+              serviceoffering.map((item, value) => {
+                console.log(item.id);
+                return (
+                  <Tab key={value} value={item.id}>
+                    {item.attributes.title}
+                  </Tab>
+                );
+              })}
+          </TabsHeader>
+          <TabsBody>
+            {serviceoffering &&
+              serviceoffering.map((item, value) => (
+                <TabPanel key={value} value={item.id}>
+                  <div
+                    id="abts-us"
+                    className="flex shadow-md	justify-between	p-12 items-center"
+                  >
+                    <div className="w-2/3 mr-24">
+                      <h2 className="text-4xl text-left font-semibold	font-Quicksand mb-6">
+                        {item.attributes.title}
+                      </h2>
+                      <p className="mb-2 text-left">
+                        {" "}
+                        {item.attributes.description}
+                      </p>
+                    </div>
+
+                    <div className="w-1/3 text-end	">
+                      {item.attributes.image.data ? (
+                        <img
+                          className="w-full"
+                          src={`http://34.122.203.107:1338${item.attributes.image.data[0].attributes.url}`}
+                          alt="Avatar"
+                          width={384}
+                          height={310}
+                        />
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                  </div>
+                </TabPanel>
+              ))}
+          </TabsBody>
+        </Tabs>):("")}
       </div>
     </>
   );
 };
 
-export default Tabs;
+export default Tabss;
