@@ -245,6 +245,9 @@ p.font-Mulish.mb-10 br {
 .carousel-item p.font-Mulish.mb-10 {
   margin-bottom: 19px;
 }
+.carousal-sectionss {
+  display: flex;
+}
 
 }
 
@@ -256,6 +259,24 @@ p.font-Mulish.mb-10 br {
 .carousel-item h3 {
   font-size: 31px;
   line-height: 35px;
+}
+.carousal-sectionss h3,div#abts-us h2,div#service-of h3,div#faqs h3,#contact h3{
+  font-size: 30px;
+  line-height: 35px;
+}
+.carousal-sectionss p,div#abts-us p,div#service-of p,div#faqs p,#contact p{
+  font-size: 16px;
+  line-height: 25px;
+}
+div#abts-us .tabs-rights {
+  margin: 10px auto;
+}
+.w-2\/3.mr-24.tabs-left {
+  width: 100%;
+}
+div#abts-us {
+  display: block;
+  padding-bottom: 20px;
 }
 
 .fqs-main .block.relative.w-full button {
@@ -396,11 +417,20 @@ li.nav-item:last-child {
   width: 100%;
 }
 .abt-main .w-1\/2 img {
-  margin-bottom: -60px;
+  margin-bottom: 10px;
 }
 .ser-wrapper .w-full {
   display: block;
 }
+
+div#abts-us {
+  padding: 10px;
+}
+.abt-main {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
 .ser-wrapper .w-full ul.w-5\/12 {
   width: 100%;
 }
@@ -434,24 +464,84 @@ li.nav-item:last-child {
 .abt-main img {
   margin-top: 0;
 }
-
-div#abts-us {
-  padding: 0;
+div#abts-us{
+  padding-bottom: 20px;
+  padding: 15px;
 }
 .cnt {
   margin-bottom: 46px;
 }
+.tabs-menuss {
+  display: flex !important;
+  justify-content: center;
+}
 
+.carousal-sectionss {
+  text-align: center;
+}
+.carousel-item a{
 
-
+  margin:0 auto;
+}
+.abt-main {
+  margin-top: 10px;
+}.abt-main div#abts-us .w-1\/2.mr-12 {
+  padding: 0px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+div#service-of {
+  padding-top:20px;
+  padding-bottom:20px;
+  background: #ffffff;
+}
+.fqs-main {
+  padding-top: 10px;
+}
+#service-of nav {
+  margin-top: 20px;
+}
+carousal-sectionss h3, div#abts-us h2, div#service-of h3, div#faqs h3, #contact h3 {
+  font-size: 30px;
+  line-height: 35px;
+}
+.fqs-main {
+  margin-top: 0px;
+  padding-top: 43px;
+}
+div#abts-us h2 {
+  margin-top: 0px;
+}
+div#abts-us .w-1\/2.ml-12 {
+  padding-top: 20px;
+}
+div#abts-us p, div#service-of p, div#faqs p, #contact p,
+carousal-sectionss h3, div#abts-us h2, div#service-of h3, div#faqs h3, #contact h3{
+text-align: left;
+}
+.fqs-main {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
 }
 
 
+
 @media(max-width:568px){  
+
+
+  .tabpanelss {
+    padding: 0px;
+}
 
   .abt-main .w-1\/2 img {
     margin-bottom: 0;
+}
+carousal-sectionss h3, div#abts-us h2, div#service-of h3, div#faqs h3, #contact h3 {
+  font-size: 23px;
+  line-height: 30px;
+  margin-bottom: 5px;
 }
 .s-line {
   margin-top: 7px;
@@ -550,8 +640,12 @@ footer .font-extrabold {
   line-height: 2.5rem;
 }
 div#abts-us {
-  padding: 34px;
+  padding: 10px;
 }
+.footer-mainsparts .footer-raper-left {
+  padding-top: 0px;
+}
+
 .tab-pane .text-end {
   width: 100%;
 }
@@ -560,7 +654,7 @@ div#abts-us {
   padding-bottom: 24px;
 }
 .clms-wrapper {
-  padding: 25px;
+  padding: 15px;
 }
 footer p {
   margin-left: 20px;
@@ -573,7 +667,9 @@ footer p {
   display: none;
 }
 
-
+.footer-raper-left li {
+  list-style: none;
+}
 
 
 

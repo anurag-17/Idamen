@@ -58,7 +58,7 @@ export default function Carousel() {
                 return (
                 <>
                   <div className={` ${index ===0 ? 'carousel-item active relative float-left w-full' : 'carousel-item relative float-left w-full'}`} >
-                    <div className="lg:max-w-7xl p-4  mx-auto lg:flex justify-between items-center ">
+                    <div className="lg:max-w-7xl p-4  mx-auto lg:flex justify-between items-center carousal-sectionss">
                       <div className="w-1/2 pr-6">
                         <h3 className="text-5xl font-Mulish pb-5">
                           {item.attributes.title}

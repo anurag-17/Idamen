@@ -121,7 +121,7 @@ const Tabss = () => {
               serviceoffering.map((item, value) => {
                 console.log(item.id);
                 return (
-                  <Tab key={value} value={item.id}>
+                  <Tab key={value} value={item.id} className="tabs-menuss">
                     {item.attributes.title}
                   </Tab>
                 );
@@ -130,12 +130,12 @@ const Tabss = () => {
           <TabsBody>
             {serviceoffering &&
               serviceoffering.map((item, value) => (
-                <TabPanel key={value} value={item.id}>
+                <TabPanel key={value} value={item.id} class="tabpanelss">
                   <div
                     id="abts-us"
                     className="flex shadow-md	justify-between	p-12 items-center"
                   >
-                    <div className="w-2/3 mr-24">
+                    <div className="w-2/3 mr-24 tabs-left">
                       <h2 className="text-4xl text-left font-semibold	font-Quicksand mb-6">
                         {item.attributes.title}
                       </h2>
@@ -145,7 +145,7 @@ const Tabss = () => {
                       </p>
                     </div>
 
-                    <div className="w-1/3 text-end	">
+                    <div className="w-1/3 text-end	tabs-rights">
                       {item.attributes.image.data ? (
                         <img
                           className="w-full"

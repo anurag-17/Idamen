@@ -54,7 +54,7 @@ const Footer = () => {
   return (
     <div>
       {serviceoffering ? (
-        <footer className="text-center lg:text-left bg-stons-900 text-zinc-400	">
+        <footer className="text-center lg:text-left bg-stons-900 text-zinc-400	footer-mainsparts">
           <div className="bg-gray-500">
             <div className="flex foot-wrapper max-w-7xl mx-auto justify-center items-center lg:justify-between py-10">
               <div className="mr-12 hidden lg:block text-black">
@@ -114,7 +114,7 @@ const Footer = () => {
           </div>
 
           <div className="max-w-7xl  mx-auto foot-wrapper">
-            <div className="mx-0 py-10 text-center md:text-left">
+            <div className="mx-0 py-10 text-center md:text-left footer-raper-left">
               <div className="lg:flex md:flex sm:block justify-center gap-8">
                 <div className="lg:w-4/12 md:w-6/12 sm:w-12/12 max-[600px]:mb-3">
                   <h6
@@ -305,7 +305,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="text-center p-6  border-t border-gray-300">
-              <span> © 2022 idamen Systems. All rights reserved.</span>
+              <span> © 2023  idamen Systems. All rights reserved.</span>
             </div>
           </div>
         </footer>
