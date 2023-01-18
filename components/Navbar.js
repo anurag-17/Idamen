@@ -167,7 +167,7 @@ export default function Example() {
         </div>
       </div>
 
-      <Transition
+      {/* <Transition
         as={Fragment}
         enter="duration-200 ease-out"
         enterFrom="opacity-0 scale-95"
@@ -175,7 +175,7 @@ export default function Example() {
         leave="duration-100 ease-in"
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
-      >
+      > */}
         <Popover.Panel
           focus
           className="mbwrapper absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
@@ -255,7 +255,7 @@ export default function Example() {
             </div>
           </div>
         </Popover.Panel>
-      </Transition>
+      {/* </Transition> */}
     </Popover>
   );
 }
