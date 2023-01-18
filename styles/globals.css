@@ -640,8 +640,29 @@ footer .font-extrabold {
   line-height: 2.5rem;
 }
 div#abts-us {
-  padding: 10px;
+  padding: 10px 0px;
 }
+
+div#service-of {
+  padding: 20px 10px;
+}
+
+div#service-of .w-full.h-max.text-gray-700.p-4.antialiased.font-sans.text-base.font-light.leading-relaxed {
+  padding: 10px 5px;
+}
+
+div#service-of div#abts-us {
+  padding: 10px 10px;
+}
+
+#service-of ul.flex.relative.bg-blue-gray-50.bg-opacity-60.rounded-lg.p-1 {
+  display: block;
+}
+div#contact {
+  padding: 0px 0px;
+}
+
+
 .footer-mainsparts .footer-raper-left {
   padding-top: 0px;
 }
@@ -656,10 +677,18 @@ div#abts-us {
 .clms-wrapper {
   padding: 15px;
 }
-footer p {
-  margin-left: 20px;
-  margin-right: 20px;
+.form-news {
+  width: 100%;
 }
+
+footer p {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.foot-wrapper {
+  max-width: 100%;
+}
+
 .carousel-inner {
   padding-top: 0;
 }

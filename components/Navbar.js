@@ -23,13 +23,13 @@ const solutions = [
     name: "About Us",
     description:
       "Get a better understanding of where your traffic is coming from.",
-    href: "#",
+    href: "#abts-us",
     icon: ChartBarIcon,
   },
   {
     name: "Service Offerings",
     description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
+    href: "#service-of",
     icon: CursorArrowRaysIcon,
   },
   {
@@ -118,7 +118,7 @@ export default function Example() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
+            <a href="/">
               <span className="sr-only">Idamen</span>
               <img
                 className="h-8 sitelogo w-auto sm:h-10"
@@ -158,7 +158,7 @@ export default function Example() {
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-3 lg:w-30">
             <a
-              href="#"
+              href="#contact"
               className="ml-8 hovs font-semibold	uppercase inline-flex items-center justify-center whitespace-nowrap rounded-full	bg-black  px-8 py-4 text-sm font-extrabold text-white shadow-sm hover:bg-black-500"
             >
               Get Started Today
@@ -222,7 +222,7 @@ export default function Example() {
             <div className="space-y-6 py-6 px-5">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <a
-                  href="#"
+                  href="#abts-us"
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
                   About Us
@@ -246,7 +246,7 @@ export default function Example() {
               </div>
               <div>
                 <a
-                  href="#"
+                  href="#contact"
                   className="flex w-full hovs font-bold items-center justify-center rounded-full border bg-black-500  px-8 py-4 font-sm uppercase text-white shadow-sm hover:bg-indigo-700"
                 >
                   Get Started Today
