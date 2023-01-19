@@ -33,7 +33,7 @@ const solutions = [
     icon: CursorArrowRaysIcon,
   },
   {
-    name: "FAQ",
+    name: "FAQ's",
     description: "Connect with third-party tools that you're already using.",
     href: "#faqs",
     icon: Squares2X2Icon,
@@ -154,7 +154,7 @@ export default function Example() {
               href="#faqs"
               className="text-base font-medium font-sm text-black-500 hover:text-gray-900"
             >
-              FAQ
+              FAQ's
             </a>
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-3 lg:w-30">
