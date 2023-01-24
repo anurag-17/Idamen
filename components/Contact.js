@@ -17,7 +17,7 @@ export const Contact = () => {
   const sendemail = async (e) => {
     e.preventDefault();
     await axios.post(
-      "http://34.122.203.107:1338/api/contactusemails",
+      "http://34.136.73.77:1338/api/contactusemails",
       { data: email },
       {
         headers: headers,
@@ -40,7 +40,7 @@ export const Contact = () => {
   };
   const fetchserviceoffering = async () => {
     await axios
-      .get("http://34.122.203.107:1338/api/contactuses?populate=Img", {
+      .get("http://34.136.73.77:1338/api/contactuses?populate=Img", {
         headers: headers,
       })
       .then((res) => setserviceoffering(res.data.data));

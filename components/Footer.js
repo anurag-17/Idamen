@@ -21,14 +21,14 @@ const Footer = () => {
   };
   const fetchserviceoffering = async () => {
     await axios
-      .get("http://34.122.203.107:1338/api/contactuses?populate=Img", {
+      .get("http://34.136.73.77:1338/api/contactuses?populate=Img", {
         headers: headers,
       })
       .then((res) => setserviceoffering(res.data.data));
   };
   const social = async () => {
     await axios
-      .get("http://34.122.203.107:1338/api/website-info", {
+      .get("http://34.136.73.77:1338/api/website-info", {
         headers: headers,
       })
       .then((res) => setsocialmedia(res.data.data));
@@ -37,7 +37,7 @@ const Footer = () => {
   const submitemail = async (e) => {
     e.preventDefault();
     await axios.post(
-      "http://34.122.203.107:1338/api/newsletters",
+      "http://34.136.73.77:1338/api/newsletters",
       { data: newsleeter },
       {
         headers: headers,

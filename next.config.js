@@ -18,12 +18,18 @@ module.exports = {
   images: {
     remotePatterns: [
       {
-        hostname: '34.122.203.107',
+        hostname: '34.136.73.77',
       },
     ],
   },
 }
 
+module.exports = {
+  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+}
 module.exports = {
   reactStrictMode: true,
   eslint: {
