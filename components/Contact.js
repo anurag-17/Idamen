@@ -47,7 +47,6 @@ export const Contact = () => {
   };
   const [message, setMessage] = useState("");
 
-  console.log(serviceoffering);
   return (
     <div className="cls-f">
       <div id="contact" className="mx-auto max-w-7xl px-4 py-2 text-center">

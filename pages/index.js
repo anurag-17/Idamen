@@ -37,11 +37,12 @@ export default function Home() {
         <Carousel />
       </div>
       <About />
+   
       <Service />
       <Faq />
       <Contact />
 
-      <Footer />
+      <Footer /> 
     </div>
   );
 }

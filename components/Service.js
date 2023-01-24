@@ -17,7 +17,6 @@ const Tabss = () => {
     let headers = {
       Authorization:
       "bearer 69cb9b78ec4fbae4454e2d7d937ed535eea92c9cd01d9f77836a25ad55bba65e63943b12028ae7cdfdc451ae19895c0fff3f4b273b84765f607a277d968cbb1709d07084aab0e142aac30edae7e4fe194903eac57c726bd4d845c1fadefa85868a37e2c087dc1657da45d85dd02d22a9a09387b4d6a3dfb17f37e8875d173d91",
-      'Access-Control-Allow-Origin' :"*"
     };
     await axios
       .get("http://34.136.73.77:1338/api/clouds?populate=image", {
@@ -120,7 +119,6 @@ const Tabss = () => {
           <TabsHeader>
             {serviceoffering &&
               serviceoffering.map((item, value) => {
-                console.log(item.id);
                 return (
                   <Tab key={value} value={item.id} className="tabs-menuss">
                     {item.attributes.title}

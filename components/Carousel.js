@@ -21,7 +21,6 @@ export default function Carousel() {
     let headers = {
       Authorization:
       "bearer 69cb9b78ec4fbae4454e2d7d937ed535eea92c9cd01d9f77836a25ad55bba65e63943b12028ae7cdfdc451ae19895c0fff3f4b273b84765f607a277d968cbb1709d07084aab0e142aac30edae7e4fe194903eac57c726bd4d845c1fadefa85868a37e2c087dc1657da45d85dd02d22a9a09387b4d6a3dfb17f37e8875d173d91",
-      'Access-Control-Allow-Origin' :"*"
     };
     await axios
       .get("http://34.136.73.77:1338/api/sliders?populate=image", {
@@ -55,7 +54,6 @@ export default function Carousel() {
         <div className="carousel-inner relative pb-28 pt-28 w-full overflow-hidden">
           {serviceoffering &&
               serviceoffering.map((item, index) => {
-              console.log(item.attributes);
                 return (
                 <>
                   <div className={` ${index ===0 ? 'carousel-item active relative float-left w-full' : 'carousel-item relative float-left w-full'}`} >
